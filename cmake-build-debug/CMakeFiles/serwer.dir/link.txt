@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/serwer.dir/serwer.cpp.o CMakeFiles/serwer.dir/TCPserwer.cpp.o CMakeFiles/serwer.dir/BuildResponse.cpp.o -o serwer 

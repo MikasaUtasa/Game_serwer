@@ -1,0 +1,35 @@
+15:48:4  INFO[0] Serwer start Logging
+
+15:48:4  INFO[0] *** Listening on address: 0.0.0.0 PORT: 8080 ***
+
+15:48:4  INFO[0] ====== Waiting for a new connections ======
+15:48:9  INFO[0] Connection from 127.0.0.1:37764
+15:48:10  INFO[0] ------ Received data from client:   q
+
+15:48:10  INFO[0] ------ Server Response sent to client:   q
+
+15:48:12  INFO[0] ------ Received data from client:   e
+
+15:48:12  INFO[0] ------ Server Response sent to client:   e
+
+15:48:13  INFO[0] ------ Received data from client:   q
+
+15:48:13  INFO[0] ------ Server Response sent to client:   q
+
+15:48:14  INFO[0] ------ Received data from client:   w
+
+15:48:14  INFO[0] ------ Server Response sent to client:   w
+
+15:48:15  INFO[0] ------ Received data from client:   qwe
+
+15:48:15  INFO[0] ------ Server Response sent to client:   qwe
+
+15:48:16  INFO[0] Failed to read bytes from client socket connection
+15:48:16  INFO[0] ====== Waiting for a new connections ======
+15:48:19  INFO[0] Connection from 127.0.0.1:34000
+15:48:21  INFO[0] ------ Received data from client:   sd
+
+15:48:21  INFO[0] ------ Server Response sent to client:   sd
+
+15:48:22  INFO[0] Failed to read bytes from client socket connection
+15:48:22  INFO[0] ====== Waiting for a new connections ======
