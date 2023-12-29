@@ -45,6 +45,7 @@ TCPserwer::TCPserwer(std::string srv_ip_addr ,int port) {
 }
 
 TCPserwer::~TCPserwer() {
+    cleanUpThreads();
     stopSerwer();
 }
 
@@ -86,6 +87,7 @@ int TCPserwer::startSerwer() {
 
     if (bind(sockfd, (sockaddr*) &serv_addr, sizeof(serv_addr)) < 0) {
         log("Bind ERROR", 1);
+        exit(-1);
         return 1;
     } //Nieudany bind zwraca -1
 
@@ -133,25 +135,11 @@ void TCPserwer::startListen() {
         log(ss.str(), 0);
         ss.str("");
 
-        //handleConnection(clientSocket, clientAddress);
-
         std::thread connectionThread([this, clientSocket, clientAddress]() {
             sockaddr_in copyOfClientAddress = clientAddress;
             this->handleConnection(clientSocket, copyOfClientAddress);
         });
-
-
         Threads.emplace_back(std::move(connectionThread));
-        //Threads.emplace_back(std::move(t));
-
-
-
-        //log("====== Waiting for a new connections ======", 0);
-
-        //TCPserwer::createThread();
-
-
-        //close(newsockfd);
     }
 
 }
@@ -170,7 +158,7 @@ int TCPserwer::acceptConnection() {
         log(ss.str(), 1);
         return -1;
     }
-    ss.clear();
+    ss.str("");
     ss << "Connection from "
        << inet_ntoa(cli_addr.sin_addr)
        << ":"
@@ -192,6 +180,8 @@ void TCPserwer::handleConnection(/*void *new_sockfd*/int new_sock, sockaddr_in &
         rcv = read(new_sock, buffer, BUFFER_SIZE);
         if (rcv <= 0) {
             log("Failed to read bytes from client socket connection", 0);
+            close(new_sock);
+            //TCPserwer::cleanUpThreads();
             break;
         }
         //ss.str(std::string());
@@ -236,17 +226,7 @@ void TCPserwer::createThread() {
     t1.join();
     t2.join();
 
-
 }
-
-
-/*void TCPserwer::error(const std::string &msg) {
-    std::ostringstream ss;
-    ss << "ERROR!!  "
-       << msg;
-    log(ss.str());
-    exit(0);
-} */
 
 
 
@@ -259,5 +239,8 @@ void TCPserwer::cleanUpThreads() {
                            [](const std::thread& t) { return t.joinable(); }),
             Threads.end());
 }
+
+
+
 
 
