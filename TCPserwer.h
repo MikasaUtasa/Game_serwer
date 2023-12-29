@@ -13,25 +13,28 @@
 #include <string>
 #include <fstream>
 #include <sstream>
-
+#include <vector>
+#include <thread>
 
 
 
 class TCPserwer {
 public:
-    TCPserwer(std::string srv_ip_addr ,int port, std::string logging_file);
+    TCPserwer(std::string srv_ip_addr ,int port);
     ~TCPserwer();
     void startListen();
-    const int BUFFER_SIZE = 30720;
+    static const int BUFFER_SIZE = 30720;
 
 private:
     std::string srv_ip_address;
     std::string logging_file;
     std::ofstream log_file;
     std::string serwerMessage;
+    std::vector<std::thread> Threads;
 
     long message;
-    int sockfd, newsockfd, port, rcv;
+    int sockfd, port;
+    int rcv, newsockfd;
     unsigned int clilen;
     struct sockaddr_in serv_addr, cli_addr;
     char buffer[256];
@@ -40,10 +43,10 @@ private:
     int startSerwer();
     void stopSerwer();
     int acceptConnection();
-    void handleConnection(/*void *new_sockfd*/ int new_sock);
-    void sendData(std::string  &buffer);
+    void handleConnection(/*void *new_sockfd*/ int new_sock, sockaddr_in &client);
+    void sendData(std::string  &buffer, int &socket);
     void createThread();
+    void cleanUpThreads();
 };
-
 
 #endif //SERWER_TCPSERWER_H

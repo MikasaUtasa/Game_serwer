@@ -226,18 +226,11 @@ CMakeFiles/serwer.dir/TCPserwer.cpp.o: ../TCPserwer.cpp \
   /usr/include/c++/11/bits/fstream.tcc \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
-  /usr/include/c++/11/iostream \
-  /usr/include/c++/11/stdlib.h \
-  /usr/include/arpa/inet.h \
-  /usr/include/c++/11/ctime \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/thread \
   /usr/include/c++/11/stop_token \
   /usr/include/c++/11/atomic \
@@ -254,6 +247,14 @@ CMakeFiles/serwer.dir/TCPserwer.cpp.o: ../TCPserwer.cpp \
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
   /usr/include/syscall.h \
   /usr/include/x86_64-linux-gnu/sys/syscall.h \
   /usr/include/x86_64-linux-gnu/asm/unistd.h \
@@ -276,10 +277,14 @@ CMakeFiles/serwer.dir/TCPserwer.cpp.o: ../TCPserwer.cpp \
   /usr/include/c++/11/chrono \
   /usr/include/c++/11/ratio \
   /usr/include/c++/11/limits \
+  /usr/include/c++/11/ctime \
   /usr/include/c++/11/bits/parse_numbers.h \
   /usr/include/x86_64-linux-gnu/sys/time.h \
   /usr/include/semaphore.h \
   /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+  /usr/include/c++/11/iostream \
+  /usr/include/c++/11/stdlib.h \
+  /usr/include/arpa/inet.h \
   /usr/include/c++/11/future \
   /usr/include/c++/11/mutex \
   /usr/include/c++/11/bits/unique_lock.h \
@@ -516,6 +521,62 @@ CMakeFiles/serwer.dir/serwer.cpp.o: ../serwer.cpp \
   /usr/include/c++/11/bits/fstream.tcc \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/thread \
+  /usr/include/c++/11/stop_token \
+  /usr/include/c++/11/atomic \
+  /usr/include/c++/11/bits/atomic_base.h \
+  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/11/bits/atomic_wait.h \
+  /usr/include/c++/11/climits \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
+  /usr/include/syscall.h \
+  /usr/include/x86_64-linux-gnu/sys/syscall.h \
+  /usr/include/x86_64-linux-gnu/asm/unistd.h \
+  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
+  /usr/include/x86_64-linux-gnu/bits/syscall.h \
+  /usr/include/c++/11/bits/std_mutex.h \
+  /usr/include/c++/11/bits/std_thread.h \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/bits/refwrap.h \
+  /usr/include/c++/11/bits/unique_ptr.h \
+  /usr/include/c++/11/semaphore \
+  /usr/include/c++/11/bits/semaphore_base.h \
+  /usr/include/c++/11/bits/atomic_timed_wait.h \
+  /usr/include/c++/11/bits/this_thread_sleep.h \
+  /usr/include/c++/11/chrono \
+  /usr/include/c++/11/ratio \
+  /usr/include/c++/11/limits \
+  /usr/include/c++/11/ctime \
+  /usr/include/c++/11/bits/parse_numbers.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
+  /usr/include/semaphore.h \
+  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
   ../BuildResponse.h
 
 
@@ -527,9 +588,17 @@ CMakeFiles/serwer.dir/serwer.cpp.o: ../serwer.cpp \
 
 /usr/include/c++/11/mutex:
 
+/usr/include/arpa/inet.h:
+
+/usr/include/c++/11/stdlib.h:
+
+/usr/include/c++/11/iostream:
+
 /usr/include/x86_64-linux-gnu/sys/time.h:
 
 /usr/include/c++/11/bits/parse_numbers.h:
+
+/usr/include/c++/11/ctime:
 
 /usr/include/c++/11/bits/atomic_timed_wait.h:
 
@@ -546,6 +615,8 @@ CMakeFiles/serwer.dir/serwer.cpp.o: ../serwer.cpp \
 /usr/include/c++/11/array:
 
 /usr/include/c++/11/tuple:
+
+/usr/include/c++/11/bits/std_mutex.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
@@ -606,8 +677,6 @@ CMakeFiles/serwer.dir/serwer.cpp.o: ../serwer.cpp \
 /usr/include/c++/11/debug/assertions.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
-
-/usr/include/c++/11/bits/std_mutex.h:
 
 /usr/include/c++/11/cstdio:
 
@@ -737,8 +806,6 @@ CMakeFiles/serwer.dir/serwer.cpp.o: ../serwer.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
-/usr/include/c++/11/ctime:
-
 /usr/include/c++/11/bits/iterator_concepts.h:
 
 /usr/include/c++/11/ext/numeric_traits.h:
@@ -779,13 +846,9 @@ CMakeFiles/serwer.dir/serwer.cpp.o: ../serwer.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
-/usr/include/c++/11/iostream:
-
 /usr/include/x86_64-linux-gnu/sys/syscall.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/usr/include/arpa/inet.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
@@ -850,6 +913,8 @@ CMakeFiles/serwer.dir/serwer.cpp.o: ../serwer.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/x86_64-linux-gnu/asm/sockios.h:
+
+/usr/include/c++/11/bits/vector.tcc:
 
 /usr/include/asm-generic/sockios.h:
 
@@ -922,6 +987,8 @@ CMakeFiles/serwer.dir/serwer.cpp.o: ../serwer.cpp \
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
+/usr/include/c++/11/bits/stl_bvector.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
@@ -1007,6 +1074,8 @@ CMakeFiles/serwer.dir/serwer.cpp.o: ../serwer.cpp \
 
 /usr/include/c++/11/system_error:
 
+/usr/include/c++/11/bits/stl_vector.h:
+
 /usr/include/c++/11/utility:
 
 /usr/include/c++/11/ios:
@@ -1063,19 +1132,11 @@ CMakeFiles/serwer.dir/serwer.cpp.o: ../serwer.cpp \
 
 /usr/include/c++/11/sstream:
 
-/usr/include/c++/11/stdlib.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
-
-/usr/include/c++/11/bits/exception_defines.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
-
-/usr/include/x86_64-linux-gnu/bits/environments.h:
+/usr/include/c++/11/vector:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
-/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+/usr/include/c++/11/bits/stl_uninitialized.h:
 
 /usr/include/c++/11/new:
 
@@ -1094,5 +1155,15 @@ CMakeFiles/serwer.dir/serwer.cpp.o: ../serwer.cpp \
 /usr/include/c++/11/string:
 
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/c++/11/bits/exception_defines.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
 /usr/include/x86_64-linux-gnu/bits/syscall.h:

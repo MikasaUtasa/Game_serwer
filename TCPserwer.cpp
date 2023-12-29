@@ -17,6 +17,7 @@ struct sockaddr_in
 #include "TCPserwer.h"
 #include <string>
 #include <cstdio>
+#include <sys/socket.h>
 #include <iostream>
 #include <stdlib.h>
 #include <strings.h>
@@ -30,10 +31,13 @@ struct sockaddr_in
 #include <future>
 #include <pthread.h>
 #include "BuildResponse.h"
+#include <vector>
+#include <mutex>
 
 
-TCPserwer::TCPserwer(std::string srv_ip_addr ,int port, std::string logging_file) {
-    TCPserwer::logging_file = logging_file;
+
+TCPserwer::TCPserwer(std::string srv_ip_addr ,int port) {
+    TCPserwer::logging_file = "logs.txt";
     TCPserwer::port = port;
     TCPserwer::srv_ip_address = srv_ip_addr;
     startSerwer();
@@ -108,16 +112,46 @@ void TCPserwer::startListen() {
     log(ss.str(), 0);
 
     while (true) {
-        log("====== Waiting for a new connections ======", 0);
-        //std::thread t(&TCPserwer::acceptConnection, this, std::ref(newsockfd));
-        //auto f1 = std::async(&TCPserwer::acceptConnection, this, newsockfd);
-        TCPserwer::acceptConnection();
-        TCPserwer::handleConnection(newsockfd);
+        sockaddr_in clientAddress;
+        socklen_t clientAddressSize = sizeof(clientAddress);
+        int clientSocket = accept(sockfd, (sockaddr*)&clientAddress, &clientAddressSize);
+
+
+        if (clientSocket == -1) {
+            ss << "Failed to accept connection from "
+               << inet_ntoa(clientAddress.sin_addr)
+               << ":"
+               << ntohs(clientAddress.sin_port);
+            log(ss.str(), 1);
+        }
+
+        ss.clear();
+        ss << "Connection from "
+           << inet_ntoa(clientAddress.sin_addr)
+           << ":"
+           << ntohs(clientAddress.sin_port);
+        log(ss.str(), 0);
+        ss.str("");
+
+        //handleConnection(clientSocket, clientAddress);
+
+        std::thread connectionThread([this, clientSocket, clientAddress]() {
+            sockaddr_in copyOfClientAddress = clientAddress;
+            this->handleConnection(clientSocket, copyOfClientAddress);
+        });
+
+
+        Threads.emplace_back(std::move(connectionThread));
+        //Threads.emplace_back(std::move(t));
+
+
+
+        //log("====== Waiting for a new connections ======", 0);
+
         //TCPserwer::createThread();
 
-        //TCPserwer::handleConnection(newsockfd);
 
-        close(newsockfd);
+        //close(newsockfd);
     }
 
 }
@@ -126,7 +160,8 @@ void TCPserwer::startListen() {
 int TCPserwer::acceptConnection() {
     clilen = sizeof(cli_addr);
     std::ostringstream ss;
-    newsockfd = accept(sockfd, (sockaddr*) &cli_addr, &clilen);
+    sockaddr_in client = cli_addr;
+    int new_sock = accept(sockfd, (sockaddr*) &cli_addr, &clilen);
     if (newsockfd < 0) {
         ss << "Failed to accept connection from "
            << inet_ntoa(cli_addr.sin_addr)
@@ -141,17 +176,17 @@ int TCPserwer::acceptConnection() {
        << ":"
        << ntohs(cli_addr.sin_port);
     log(ss.str(), 0);
+    handleConnection(new_sock, client);
     return 1;
 }
 
-void TCPserwer::handleConnection(/*void *new_sockfd*/int new_sock) {
+void TCPserwer::handleConnection(/*void *new_sockfd*/int new_sock, sockaddr_in &client) {
 
-    //int cli_sock = *((int*) new_sockfd);
-    //std::cout << new_sockfd << "  " << cli_sock << std::endl;
-    //free(new_sockfd);
     while (new_sock >= 0) {
         char buffer[BUFFER_SIZE] = {0};
         std::ostringstream ss;
+        std::ostringstream client_str;
+        client_str << inet_ntoa(client.sin_addr) << ":" << ntohs(client.sin_port);
         std::string buff;// = "Hello from serwer";
         //sendData(buff);
         rcv = read(new_sock, buffer, BUFFER_SIZE);
@@ -160,18 +195,18 @@ void TCPserwer::handleConnection(/*void *new_sockfd*/int new_sock) {
             break;
         }
         //ss.str(std::string());
-        ss << "------ Received data from client:   " << buffer;
+        ss << "------ Received data from " << client_str.str() << "   :" << buffer;
         log(ss.str(), 0);
         buff = buffer;
-        sendData(buff);
+        sendData(buff, new_sock);
     }
-
+    //close(new_sock);
 }
 
-void TCPserwer::sendData(std::string &buffer) {
+void TCPserwer::sendData(std::string &buffer, int &socket) {
     long bytesSent;
     std::ostringstream ss;
-    bytesSent = write(newsockfd, buffer.c_str(), buffer.size());
+    bytesSent = write(socket, buffer.c_str(), buffer.size());
     if (bytesSent == buffer.size())
     {
         ss << "------ Server Response sent to client:   " << buffer;
@@ -187,14 +222,20 @@ void TCPserwer::sendData(std::string &buffer) {
 
 void TCPserwer::createThread() {
 
-    pthread_t t;
-    //double *data = new double[size];
-    int *socket = new int[sizeof(int)];
-    int *asd = &newsockfd;
-    std:: cout << socket << "  " << &newsockfd << " " << newsockfd << " " << asd << std::endl;
-    socket = asd;
-    std:: cout << socket << "  " << &newsockfd << " " << newsockfd << std::endl;
-    pthread_create(&t, NULL, reinterpret_cast<void *(*)(void *)>(&TCPserwer::handleConnection), socket);
+    //TCPserwer::threads.emplace_back(&TCPserwer::handleConnection, this, new_sock);
+    //TCPserwer::threads.back().detach();
+    std::thread t1([this]() {
+        acceptConnection();
+    });
+    std::thread t2([this]() {
+        acceptConnection();
+    });
+    std::cout << t1.get_id() << std::endl;
+    std::cout << t2.get_id() << std::endl;
+
+    t1.join();
+    t2.join();
+
 
 }
 
@@ -206,5 +247,17 @@ void TCPserwer::createThread() {
     log(ss.str());
     exit(0);
 } */
+
+
+
+void TCPserwer::cleanUpThreads() {
+    std::lock_guard<std::mutex> lock(std::mutex);
+
+    // Remove finished threads from the list
+    Threads.erase(
+            std::remove_if(Threads.begin(), Threads.end(),
+                           [](const std::thread& t) { return t.joinable(); }),
+            Threads.end());
+}
 
 

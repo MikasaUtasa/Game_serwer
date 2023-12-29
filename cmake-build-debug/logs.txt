@@ -1,35 +1,41 @@
-15:48:4  INFO[0] Serwer start Logging
+23:4:59  INFO[0] Serwer start Logging
 
-15:48:4  INFO[0] *** Listening on address: 0.0.0.0 PORT: 8080 ***
+23:4:59  INFO[0] *** Listening on address: 0.0.0.0 PORT: 8080 ***
 
-15:48:4  INFO[0] ====== Waiting for a new connections ======
-15:48:9  INFO[0] Connection from 127.0.0.1:37764
-15:48:10  INFO[0] ------ Received data from client:   q
+23:5:4  INFO[0] *** Listening on address: 0.0.0.0 PORT: 8080 ***
+Connection from 127.0.0.1:53668
+23:5:7  INFO[0] ------ Received data from 127.0.0.1:53668   :u
 
-15:48:10  INFO[0] ------ Server Response sent to client:   q
+23:5:7  INFO[0] ------ Server Response sent to client:   u
 
-15:48:12  INFO[0] ------ Received data from client:   e
+23:5:8  INFO[0] ------ Received data from 127.0.0.1:53668   :u
 
-15:48:12  INFO[0] ------ Server Response sent to client:   e
+23:5:8  INFO[0] ------ Server Response sent to client:   u
 
-15:48:13  INFO[0] ------ Received data from client:   q
+23:5:14  INFO[0] Connection from 127.0.0.1:34262
+23:5:15  INFO[0] ------ Received data from 127.0.0.1:34262   :a
 
-15:48:13  INFO[0] ------ Server Response sent to client:   q
+23:5:15  INFO[0] ------ Server Response sent to client:   a
 
-15:48:14  INFO[0] ------ Received data from client:   w
+23:5:16  INFO[0] ------ Received data from 127.0.0.1:34262   :d
 
-15:48:14  INFO[0] ------ Server Response sent to client:   w
+23:5:16  INFO[0] ------ Server Response sent to client:   d
 
-15:48:15  INFO[0] ------ Received data from client:   qwe
+23:5:17  INFO[0] ------ Received data from 127.0.0.1:34262   :asd
 
-15:48:15  INFO[0] ------ Server Response sent to client:   qwe
+23:5:17  INFO[0] ------ Server Response sent to client:   asd
 
-15:48:16  INFO[0] Failed to read bytes from client socket connection
-15:48:16  INFO[0] ====== Waiting for a new connections ======
-15:48:19  INFO[0] Connection from 127.0.0.1:34000
-15:48:21  INFO[0] ------ Received data from client:   sd
+23:5:21  INFO[0] ------ Received data from 127.0.0.1:53668   :asd
 
-15:48:21  INFO[0] ------ Server Response sent to client:   sd
+23:5:21  INFO[0] ------ Server Response sent to client:   asd
 
-15:48:22  INFO[0] Failed to read bytes from client socket connection
-15:48:22  INFO[0] ====== Waiting for a new connections ======
+23:5:22  INFO[0] ------ Received data from 127.0.0.1:53668   :gf
+
+23:5:22  INFO[0] ------ Server Response sent to client:   gf
+
+23:5:26  INFO[0] ------ Received data from 127.0.0.1:34262   :fg
+
+23:5:26  INFO[0] ------ Server Response sent to client:   fg
+
+23:5:28  INFO[0] Failed to read bytes from client socket connection
+23:5:33  INFO[0] Failed to read bytes from client socket connection

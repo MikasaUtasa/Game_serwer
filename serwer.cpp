@@ -16,7 +16,7 @@ int main() {
     //std::string =
     int a = BuildResponse();
     std::cout << a << std::endl;
-    TCPserwer serwer = TCPserwer("0.0.0.0", 8080, "logs.txt");
+    TCPserwer serwer = TCPserwer("0.0.0.0", 8080);
     serwer.startListen();
 
     //
