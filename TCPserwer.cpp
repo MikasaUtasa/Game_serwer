@@ -33,6 +33,7 @@ struct sockaddr_in
 #include "BuildResponse.h"
 #include <vector>
 #include <mutex>
+#include "BuildResponse.h"
 
 
 
@@ -195,6 +196,8 @@ void TCPserwer::handleConnection(/*void *new_sockfd*/int new_sock, sockaddr_in &
 
 void TCPserwer::sendData(std::string &buffer, int &socket) {
     long bytesSent;
+    buffer.clear();
+    buffer.append(BuildResponse());
     std::ostringstream ss;
     bytesSent = write(socket, buffer.c_str(), buffer.size());
     if (bytesSent == buffer.size())

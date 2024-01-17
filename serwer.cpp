@@ -11,11 +11,15 @@
 
 
 
+
 int main() {
 
-    //std::string =
-    int a = BuildResponse();
-    std::cout << a << std::endl;
+
+    std::string b = "qweqweqwewqewqe";
+    std::string a = BuildResponse();
+    b.append(a);
+
+    std::cout << b << std::endl;
     TCPserwer serwer = TCPserwer("0.0.0.0", 8080);
     serwer.startListen();
 
