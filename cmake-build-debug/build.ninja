@@ -65,6 +65,14 @@ build CMakeFiles/serwer.dir/TCPserwer.cpp.obj: CXX_COMPILER__serwer_unscanned_De
   TARGET_COMPILE_PDB = CMakeFiles\serwer.dir\
   TARGET_PDB = serwer.pdb
 
+build CMakeFiles/serwer.dir/BuildResponse.cpp.obj: CXX_COMPILER__serwer_unscanned_Debug C$:/Users/mdawczak/CLionProjects/serwer/BuildResponse.cpp || cmake_object_order_depends_target_serwer
+  DEP_FILE = CMakeFiles\serwer.dir\BuildResponse.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\serwer.dir
+  OBJECT_FILE_DIR = CMakeFiles\serwer.dir
+  TARGET_COMPILE_PDB = CMakeFiles\serwer.dir\
+  TARGET_PDB = serwer.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target serwer
@@ -73,7 +81,7 @@ build CMakeFiles/serwer.dir/TCPserwer.cpp.obj: CXX_COMPILER__serwer_unscanned_De
 #############################################
 # Link the executable serwer.exe
 
-build serwer.exe: CXX_EXECUTABLE_LINKER__serwer_Debug CMakeFiles/serwer.dir/serwer.cpp.obj CMakeFiles/serwer.dir/TCPserwer.cpp.obj
+build serwer.exe: CXX_EXECUTABLE_LINKER__serwer_Debug CMakeFiles/serwer.dir/serwer.cpp.obj CMakeFiles/serwer.dir/TCPserwer.cpp.obj CMakeFiles/serwer.dir/BuildResponse.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\serwer.dir

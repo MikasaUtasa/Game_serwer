@@ -1,4 +1,4 @@
-1:1:2  INFO[0] Serwer start Logging
+14:59:50  INFO[0] Serwer start Logging
 
-1:1:2  INFO[0] *** Listening on address: 0.0.0.0 PORT: 8080 ***
+14:59:50  INFO[0] *** Listening on address: 0.0.0.0 PORT: 8080 ***
 
