@@ -1,4 +1,18 @@
-14:59:50  INFO[0] Serwer start Logging
+21:31:55  INFO[0] Serwer start Logging
 
-14:59:50  INFO[0] *** Listening on address: 0.0.0.0 PORT: 8080 ***
+21:31:55  INFO[0] *** Listening on address: 0.0.0.0 PORT: 8080 ***
 
+21:31:59  INFO[0] *** Listening on address: 0.0.0.0 PORT: 8080 ***
+Connection from 127.0.0.1:44638
+21:31:59  INFO[0] ------ Server Response sent to client:   Hello from the server
+21:31:59  INFO[0] ------ Server Response sent to client:   Hello from the server
+21:31:59  INFO[0] ------ Server Response sent to client:   Hello from the server
+21:31:59  INFO[0] ------ Server Response sent to client:   Hello from the server
+21:31:59  INFO[0] ------ Server Response sent to client:   Hello from the server
+21:32:18  INFO[0] ------ Received data from 127.0.0.1:44638   :qwe
+
+21:32:18  INFO[0] ------ Server Response sent to client:   Question 3::Answer A::Answer B::Answer C::Correct::
+21:32:21  INFO[0] ------ Received data from 127.0.0.1:44638   :qwe
+
+21:32:21  INFO[0] ------ Server Response sent to client:   Question 1::Answer A::Answer B::Answer C::Correct::
+21:32:24  INFO[0] Failed to read bytes from client socket connection

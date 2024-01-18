@@ -1,3 +1,3 @@
-/mnt/c/Users/mdawczak/CLionProjects/serwer/cmake-build-debug/CMakeFiles/serwer.dir
-/mnt/c/Users/mdawczak/CLionProjects/serwer/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/c/Users/mdawczak/CLionProjects/serwer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/eruan/CLionProjects/Game_serwer/cmake-build-debug/CMakeFiles/serwer.dir
+/mnt/c/Users/eruan/CLionProjects/Game_serwer/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/eruan/CLionProjects/Game_serwer/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,7 +1,7 @@
 CMakeFiles/serwer.dir/TCPserwer.cpp.o: \
- /mnt/c/Users/mdawczak/CLionProjects/serwer/TCPserwer.cpp \
+ /mnt/c/Users/eruan/CLionProjects/Game_serwer/TCPserwer.cpp \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/mdawczak/CLionProjects/serwer/TCPserwer.h \
+ /mnt/c/Users/eruan/CLionProjects/Game_serwer/TCPserwer.h \
  /usr/include/netinet/in.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -232,4 +232,4 @@ CMakeFiles/serwer.dir/TCPserwer.cpp.o: \
  /usr/include/c++/11/ext/concurrence.h \
  /usr/include/c++/11/bits/atomic_futex.h \
  /usr/include/c++/11/bits/std_function.h \
- /mnt/c/Users/mdawczak/CLionProjects/serwer/BuildResponse.h
+ /mnt/c/Users/eruan/CLionProjects/Game_serwer/BuildResponse.h

@@ -171,6 +171,8 @@ int TCPserwer::acceptConnection() {
 
 void TCPserwer::handleConnection(/*void *new_sockfd*/int new_sock, sockaddr_in &client) {
 
+    std::string hello_msg = "Hello from the server";
+    sendData(hello_msg, new_sock);
     while (new_sock >= 0) {
         char buffer[BUFFER_SIZE] = {0};
         std::ostringstream ss;
@@ -189,6 +191,7 @@ void TCPserwer::handleConnection(/*void *new_sockfd*/int new_sock, sockaddr_in &
         ss << "------ Received data from " << client_str.str() << "   :" << buffer;
         log(ss.str(), 0);
         buff = buffer;
+        buff = BuildResponse();
         sendData(buff, new_sock);
     }
     //close(new_sock);
@@ -196,8 +199,8 @@ void TCPserwer::handleConnection(/*void *new_sockfd*/int new_sock, sockaddr_in &
 
 void TCPserwer::sendData(std::string &buffer, int &socket) {
     long bytesSent;
-    buffer.clear();
-    buffer.append(BuildResponse());
+    //buffer.clear();
+    //buffer.append(BuildResponse());
     std::ostringstream ss;
     bytesSent = write(socket, buffer.c_str(), buffer.size());
     if (bytesSent == buffer.size())

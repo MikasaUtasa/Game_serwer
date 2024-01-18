@@ -24,6 +24,7 @@ public:
     ~TCPserwer();
     void startListen();
     static const int BUFFER_SIZE = 30720;
+    void log(const std::string &message, int type);
 
 private:
     std::string srv_ip_address;
@@ -39,7 +40,7 @@ private:
     struct sockaddr_in serv_addr, cli_addr;
     char buffer[256];
 
-    void log(const std::string &message, int type);
+
     int startSerwer();
     void stopSerwer();
     int acceptConnection();

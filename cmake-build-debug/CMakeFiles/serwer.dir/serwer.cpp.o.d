@@ -1,5 +1,5 @@
 CMakeFiles/serwer.dir/serwer.cpp.o: \
- /mnt/c/Users/mdawczak/CLionProjects/serwer/serwer.cpp \
+ /mnt/c/Users/eruan/CLionProjects/Game_serwer/serwer.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -157,7 +157,7 @@ CMakeFiles/serwer.dir/serwer.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/stdlib.h \
  /usr/include/strings.h \
- /mnt/c/Users/mdawczak/CLionProjects/serwer/TCPserwer.h \
+ /mnt/c/Users/eruan/CLionProjects/Game_serwer/TCPserwer.h \
  /usr/include/netinet/in.h /usr/include/x86_64-linux-gnu/sys/socket.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
  /usr/include/x86_64-linux-gnu/bits/socket.h \
@@ -221,4 +221,4 @@ CMakeFiles/serwer.dir/serwer.cpp.o: \
  /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /mnt/c/Users/mdawczak/CLionProjects/serwer/BuildResponse.h
+ /mnt/c/Users/eruan/CLionProjects/Game_serwer/BuildResponse.h

@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/mdawczak/CLionProjects/serwer
+# Install script for directory: /mnt/c/Users/eruan/CLionProjects/Game_serwer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Users/mdawczak/CLionProjects/serwer/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Users/eruan/CLionProjects/Game_serwer/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

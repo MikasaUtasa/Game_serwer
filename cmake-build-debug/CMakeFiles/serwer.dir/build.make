@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/mdawczak/CLionProjects/serwer
+CMAKE_SOURCE_DIR = /mnt/c/Users/eruan/CLionProjects/Game_serwer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/mdawczak/CLionProjects/serwer/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/Users/eruan/CLionProjects/Game_serwer/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/serwer.dir/depend.make
@@ -72,44 +72,44 @@ include CMakeFiles/serwer.dir/flags.make
 CMakeFiles/serwer.dir/serwer.cpp.o: CMakeFiles/serwer.dir/flags.make
 CMakeFiles/serwer.dir/serwer.cpp.o: ../serwer.cpp
 CMakeFiles/serwer.dir/serwer.cpp.o: CMakeFiles/serwer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mdawczak/CLionProjects/serwer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/serwer.dir/serwer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/serwer.dir/serwer.cpp.o -MF CMakeFiles/serwer.dir/serwer.cpp.o.d -o CMakeFiles/serwer.dir/serwer.cpp.o -c /mnt/c/Users/mdawczak/CLionProjects/serwer/serwer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/eruan/CLionProjects/Game_serwer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/serwer.dir/serwer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/serwer.dir/serwer.cpp.o -MF CMakeFiles/serwer.dir/serwer.cpp.o.d -o CMakeFiles/serwer.dir/serwer.cpp.o -c /mnt/c/Users/eruan/CLionProjects/Game_serwer/serwer.cpp
 
 CMakeFiles/serwer.dir/serwer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serwer.dir/serwer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/mdawczak/CLionProjects/serwer/serwer.cpp > CMakeFiles/serwer.dir/serwer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/eruan/CLionProjects/Game_serwer/serwer.cpp > CMakeFiles/serwer.dir/serwer.cpp.i
 
 CMakeFiles/serwer.dir/serwer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serwer.dir/serwer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/mdawczak/CLionProjects/serwer/serwer.cpp -o CMakeFiles/serwer.dir/serwer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/eruan/CLionProjects/Game_serwer/serwer.cpp -o CMakeFiles/serwer.dir/serwer.cpp.s
 
 CMakeFiles/serwer.dir/TCPserwer.cpp.o: CMakeFiles/serwer.dir/flags.make
 CMakeFiles/serwer.dir/TCPserwer.cpp.o: ../TCPserwer.cpp
 CMakeFiles/serwer.dir/TCPserwer.cpp.o: CMakeFiles/serwer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mdawczak/CLionProjects/serwer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/serwer.dir/TCPserwer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/serwer.dir/TCPserwer.cpp.o -MF CMakeFiles/serwer.dir/TCPserwer.cpp.o.d -o CMakeFiles/serwer.dir/TCPserwer.cpp.o -c /mnt/c/Users/mdawczak/CLionProjects/serwer/TCPserwer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/eruan/CLionProjects/Game_serwer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/serwer.dir/TCPserwer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/serwer.dir/TCPserwer.cpp.o -MF CMakeFiles/serwer.dir/TCPserwer.cpp.o.d -o CMakeFiles/serwer.dir/TCPserwer.cpp.o -c /mnt/c/Users/eruan/CLionProjects/Game_serwer/TCPserwer.cpp
 
 CMakeFiles/serwer.dir/TCPserwer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serwer.dir/TCPserwer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/mdawczak/CLionProjects/serwer/TCPserwer.cpp > CMakeFiles/serwer.dir/TCPserwer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/eruan/CLionProjects/Game_serwer/TCPserwer.cpp > CMakeFiles/serwer.dir/TCPserwer.cpp.i
 
 CMakeFiles/serwer.dir/TCPserwer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serwer.dir/TCPserwer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/mdawczak/CLionProjects/serwer/TCPserwer.cpp -o CMakeFiles/serwer.dir/TCPserwer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/eruan/CLionProjects/Game_serwer/TCPserwer.cpp -o CMakeFiles/serwer.dir/TCPserwer.cpp.s
 
 CMakeFiles/serwer.dir/BuildResponse.cpp.o: CMakeFiles/serwer.dir/flags.make
 CMakeFiles/serwer.dir/BuildResponse.cpp.o: ../BuildResponse.cpp
 CMakeFiles/serwer.dir/BuildResponse.cpp.o: CMakeFiles/serwer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mdawczak/CLionProjects/serwer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/serwer.dir/BuildResponse.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/serwer.dir/BuildResponse.cpp.o -MF CMakeFiles/serwer.dir/BuildResponse.cpp.o.d -o CMakeFiles/serwer.dir/BuildResponse.cpp.o -c /mnt/c/Users/mdawczak/CLionProjects/serwer/BuildResponse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/eruan/CLionProjects/Game_serwer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/serwer.dir/BuildResponse.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/serwer.dir/BuildResponse.cpp.o -MF CMakeFiles/serwer.dir/BuildResponse.cpp.o.d -o CMakeFiles/serwer.dir/BuildResponse.cpp.o -c /mnt/c/Users/eruan/CLionProjects/Game_serwer/BuildResponse.cpp
 
 CMakeFiles/serwer.dir/BuildResponse.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serwer.dir/BuildResponse.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/mdawczak/CLionProjects/serwer/BuildResponse.cpp > CMakeFiles/serwer.dir/BuildResponse.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/eruan/CLionProjects/Game_serwer/BuildResponse.cpp > CMakeFiles/serwer.dir/BuildResponse.cpp.i
 
 CMakeFiles/serwer.dir/BuildResponse.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serwer.dir/BuildResponse.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/mdawczak/CLionProjects/serwer/BuildResponse.cpp -o CMakeFiles/serwer.dir/BuildResponse.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/eruan/CLionProjects/Game_serwer/BuildResponse.cpp -o CMakeFiles/serwer.dir/BuildResponse.cpp.s
 
 # Object files for target serwer
 serwer_OBJECTS = \
@@ -125,7 +125,7 @@ serwer: CMakeFiles/serwer.dir/TCPserwer.cpp.o
 serwer: CMakeFiles/serwer.dir/BuildResponse.cpp.o
 serwer: CMakeFiles/serwer.dir/build.make
 serwer: CMakeFiles/serwer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/mdawczak/CLionProjects/serwer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable serwer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/eruan/CLionProjects/Game_serwer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable serwer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/serwer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -137,6 +137,6 @@ CMakeFiles/serwer.dir/clean:
 .PHONY : CMakeFiles/serwer.dir/clean
 
 CMakeFiles/serwer.dir/depend:
-	cd /mnt/c/Users/mdawczak/CLionProjects/serwer/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/mdawczak/CLionProjects/serwer /mnt/c/Users/mdawczak/CLionProjects/serwer /mnt/c/Users/mdawczak/CLionProjects/serwer/cmake-build-debug /mnt/c/Users/mdawczak/CLionProjects/serwer/cmake-build-debug /mnt/c/Users/mdawczak/CLionProjects/serwer/cmake-build-debug/CMakeFiles/serwer.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/eruan/CLionProjects/Game_serwer/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/eruan/CLionProjects/Game_serwer /mnt/c/Users/eruan/CLionProjects/Game_serwer /mnt/c/Users/eruan/CLionProjects/Game_serwer/cmake-build-debug /mnt/c/Users/eruan/CLionProjects/Game_serwer/cmake-build-debug /mnt/c/Users/eruan/CLionProjects/Game_serwer/cmake-build-debug/CMakeFiles/serwer.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/serwer.dir/depend
 

@@ -6,13 +6,37 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
+#include <random>
 
 
 std::string BuildResponse(){
 
         std::ifstream file("questions.txt"); // Open the file for reading
 
-        if (file.is_open()) {
+    std::vector<std::vector<std::string>> quizData = {
+            {"Question 1", "Answer A", "Answer B", "Answer C", "Correct"},
+            {"Question 2", "Answer A", "Answer B", "Answer C", "Correct"},
+            {"Question 3", "Answer A", "Answer B", "Answer C", "Correct"},
+            {"Question 4", "Answer A", "Answer B", "Answer C", "Correct"},
+    };
+    srand((unsigned) time(0));
+    int random = rand()%4;
+    std::vector question = quizData[random];
+    std::string line;
+    for(int i = 0; i< question.size(); i++){
+        line.append(question[i]);
+        line.append("::");
+    }
+
+    return line;
+
+
+
+
+
+
+        /*if (file.is_open()) {
 
             int lineNumber = 3; // Specify the line number you want to read
             std::string line;
@@ -35,7 +59,7 @@ std::string BuildResponse(){
         else {
             std::cerr << "Could not open the file!" << std::endl;
             return "qwe"; // Return an error code
-        }
+        }*/
 
 
     }
