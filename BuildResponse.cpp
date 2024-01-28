@@ -15,10 +15,11 @@ std::string BuildResponse(){
         std::ifstream file("questions.txt"); // Open the file for reading
 
     std::vector<std::vector<std::string>> quizData = {
-            {"Question 1", "Answer A", "Answer B", "Answer C", "Correct"},
-            {"Question 2", "Answer A", "Answer B", "Answer C", "Correct"},
-            {"Question 3", "Answer A", "Answer B", "Answer C", "Correct"},
-            {"Question 4", "Answer A", "Answer B", "Answer C", "Correct"},
+            {"Question 1", "Answer A", "Answer B", "Answer C", "A"},
+            {"Question 2", "Answer A", "Answer B", "Answer C", "A"},
+            {"Question 3", "Answer A", "Answer B", "Answer C", "A"},
+            {"Question 4", "Answer A", "Answer B", "Answer C", "A"},
+            {"Question 5", "Answer A", "Answer B", "Answer C", "A"}
     };
     srand((unsigned) time(0));
     int random = rand()%4;

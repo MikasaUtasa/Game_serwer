@@ -79,6 +79,7 @@ int TCPserwer::startSerwer() {
 
 
     sockfd = socket(AF_INET, SOCK_STREAM, 0); //Tworzenie gniazda
+    //setsockopt(sockfd ,SO_REUSEADDR, 1);
     if (sockfd < 0) //Nieudane zgniazdo zwraca -1
         log("ERROR opening socket", 1);
 
@@ -174,6 +175,7 @@ void TCPserwer::handleConnection(/*void *new_sockfd*/int new_sock, sockaddr_in &
     std::string hello_msg = "Hello from the server";
     sendData(hello_msg, new_sock);
     while (new_sock >= 0) {
+
         char buffer[BUFFER_SIZE] = {0};
         std::ostringstream ss;
         std::ostringstream client_str;
@@ -181,6 +183,7 @@ void TCPserwer::handleConnection(/*void *new_sockfd*/int new_sock, sockaddr_in &
         std::string buff;// = "Hello from serwer";
         //sendData(buff);
         rcv = read(new_sock, buffer, BUFFER_SIZE);
+        std::cout << buffer << std::endl;
         if (rcv <= 0) {
             log("Failed to read bytes from client socket connection", 0);
             close(new_sock);
@@ -190,9 +193,20 @@ void TCPserwer::handleConnection(/*void *new_sockfd*/int new_sock, sockaddr_in &
         //ss.str(std::string());
         ss << "------ Received data from " << client_str.str() << "   :" << buffer;
         log(ss.str(), 0);
-        buff = buffer;
-        buff = BuildResponse();
+
+        for(int i = 0; i < 5; i++){
+            buff = BuildResponse();
+            sendData(buff, new_sock);
+            rcv = read(new_sock, buffer, BUFFER_SIZE);
+
+        }
+        buff = "END";
         sendData(buff, new_sock);
+
+
+        //buff = buffer;
+        //buff = BuildResponse();
+        //sendData(buff, new_sock);
     }
     //close(new_sock);
 }
