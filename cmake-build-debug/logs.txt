@@ -1,69 +1,86 @@
-23:13:40  INFO[0] Serwer start Logging
+23:21:12  INFO[0] Serwer start Logging
 
-23:13:40  INFO[0] *** Listening on address: 0.0.0.0 PORT: 8080 ***
+23:21:12  INFO[0] *** Listening on address: 0.0.0.0 PORT: 8080 ***
 
-23:13:42  INFO[0] *** Listening on address: 0.0.0.0 PORT: 8080 ***
-Connection from 127.0.0.1:39688
-23:13:42  INFO[0] ------ Server Response sent to client:   Hello from the server
-23:13:42  INFO[0] ------ Server Response sent to client:   39688
-23:13:42  INFO[0] ------ Received data from 127.0.0.1:39688   :Client Hello
-23:13:42  INFO[0] ------ Server Response sent to client:   Question 4::Answer A::Answer B::Answer C::A::
-23:13:44  INFO[0] Connection from 127.0.0.1:39690
-23:13:44  INFO[0] ------ Server Response sent to client:   Hello from the server
-23:13:44  INFO[0] ------ Server Response sent to client:   39690
-23:13:44  INFO[0] ------ Received data from 127.0.0.1:39690   :Client Hello
-23:13:44  INFO[0] ------ Server Response sent to client:   Question 4::Answer A::Answer B::Answer C::A::
-23:13:46  INFO[0] ------ Received data from 127.0.0.1:39690   :x
-23:13:46  INFO[0] ------ Server Response sent to client:   Question 4::Answer A::Answer B::Answer C::A::
-23:13:47  INFO[0] ------ Received data from 127.0.0.1:39690   :x
-23:13:47  INFO[0] ------ Server Response sent to client:   Question 2::Answer A::Answer B::Answer C::A::
-23:13:49  INFO[0] ------ Received data from 127.0.0.1:39690   :x
-23:13:49  INFO[0] ------ Server Response sent to client:   Question 1::Answer A::Answer B::Answer C::A::
-23:13:51  INFO[0] ------ Received data from 127.0.0.1:39688   :x
-23:13:51  INFO[0] ------ Server Response sent to client:   Question 2::Answer A::Answer B::Answer C::A::
-23:13:52  INFO[0] ------ Received data from 127.0.0.1:39688   :x
-23:13:52  INFO[0] ------ Server Response sent to client:   Question 4::Answer A::Answer B::Answer C::A::
-23:13:53  INFO[0] ------ Received data from 127.0.0.1:39688   :x
-23:13:53  INFO[0] ------ Server Response sent to client:   Question 2::Answer A::Answer B::Answer C::A::
-23:13:54  INFO[0] ------ Received data from 127.0.0.1:39688   :x
-23:13:54  INFO[0] ------ Server Response sent to client:   Question 4::Answer A::Answer B::Answer C::A::
-23:13:54  INFO[0] ------ Received data from 127.0.0.1:39688   :x
-23:13:54  INFO[0] ------ Server Response sent to client:   END
-23:13:54  INFO[0] ------ Server Response sent to client:   5
-23:13:54  INFO[0] ------ Server Response sent to client:   Wyniki Graczy
+23:21:16  INFO[0] *** Listening on address: 0.0.0.0 PORT: 8080 ***
+Connection from 127.0.0.1:41192
+23:21:16  INFO[0] ------ Server Response sent to client:   Hello from the server
+23:21:16  INFO[0] ------ Server Response sent to client:   41192
+23:21:16  INFO[0] ------ Received data from 127.0.0.1:41192   :Client Hello
+23:21:16  INFO[0] ------ Server Response sent to client:   Question 3::Answer A::Answer B::Answer C::A::
+23:21:17  INFO[0] ------ Received data from 127.0.0.1:41192   :x
+23:21:17  INFO[0] ------ Server Response sent to client:   Question 1::Answer A::Answer B::Answer C::A::
+23:21:18  INFO[0] ------ Received data from 127.0.0.1:41192   :x
+23:21:18  INFO[0] ------ Server Response sent to client:   Question 2::Answer A::Answer B::Answer C::A::
+23:21:19  INFO[0] ------ Received data from 127.0.0.1:41192   :x
+23:21:19  INFO[0] ------ Server Response sent to client:   Question 1::Answer A::Answer B::Answer C::A::
+23:21:19  INFO[0] ------ Received data from 127.0.0.1:41192   :x
+23:21:19  INFO[0] ------ Server Response sent to client:   Question 1::Answer A::Answer B::Answer C::A::
+23:21:20  INFO[0] ------ Received data from 127.0.0.1:41192   :x
+23:21:20  INFO[0] ------ Server Response sent to client:   END
+23:21:20  INFO[0] ------ Server Response sent to client:   3
+23:21:20  INFO[0] ------ Server Response sent to client:   Wyniki Graczy
 
-User 39688: 
-User 39690: 
-5
+User 41192: 3
 
 
-3
-
-
-User 42074: 
-5
+User 42070: 5
 
 
 
-23:13:55  INFO[0] Failed to read bytes from client socket connection
-23:13:58  INFO[0] ------ Received data from 127.0.0.1:39690   :x
-23:13:58  INFO[0] ------ Server Response sent to client:   Question 1::Answer A::Answer B::Answer C::A::
-23:13:58  INFO[0] ------ Received data from 127.0.0.1:39690   :x
-23:13:58  INFO[0] ------ Server Response sent to client:   END
-23:13:58  INFO[0] ------ Server Response sent to client:   4
-23:13:58  INFO[0] ------ Server Response sent to client:   Wyniki Graczy
+23:21:20  INFO[0] Failed to read bytes from client socket connection
+23:21:29  INFO[0] Connection from 127.0.0.1:46274
+23:21:29  INFO[0] ------ Server Response sent to client:   Hello from the server
+23:21:29  INFO[0] ------ Server Response sent to client:   46274
+23:21:29  INFO[0] ------ Received data from 127.0.0.1:46274   :Client Hello
+23:21:29  INFO[0] ------ Server Response sent to client:   Question 4::Answer A::Answer B::Answer C::A::
+23:21:30  INFO[0] ------ Received data from 127.0.0.1:46274   :x
+23:21:30  INFO[0] ------ Server Response sent to client:   Question 3::Answer A::Answer B::Answer C::A::
+23:21:31  INFO[0] ------ Received data from 127.0.0.1:46274   :x
+23:21:31  INFO[0] ------ Server Response sent to client:   Question 2::Answer A::Answer B::Answer C::A::
+23:21:31  INFO[0] ------ Received data from 127.0.0.1:46274   :x
+23:21:31  INFO[0] ------ Server Response sent to client:   Question 2::Answer A::Answer B::Answer C::A::
+23:21:32  INFO[0] ------ Received data from 127.0.0.1:46274   :x
+23:21:32  INFO[0] ------ Server Response sent to client:   Question 2::Answer A::Answer B::Answer C::A::
+23:21:33  INFO[0] ------ Received data from 127.0.0.1:46274   :x
+23:21:33  INFO[0] ------ Server Response sent to client:   END
+23:21:33  INFO[0] ------ Server Response sent to client:   1
+23:21:33  INFO[0] ------ Server Response sent to client:   Wyniki Graczy
 
-User 39688: 
-User 39690: 
-5
+User 41192: 3
 
 
-4
-
-
-User 42074: 
-5
+User 46274: 1
 
 
 
-23:13:58  INFO[0] Failed to read bytes from client socket connection
+23:21:33  INFO[0] Failed to read bytes from client socket connection
+23:21:41  INFO[0] Connection from 127.0.0.1:58610
+23:21:41  INFO[0] ------ Server Response sent to client:   Hello from the server
+23:21:41  INFO[0] ------ Server Response sent to client:   58610
+23:21:41  INFO[0] ------ Received data from 127.0.0.1:58610   :Client Hello
+23:21:41  INFO[0] ------ Server Response sent to client:   Question 4::Answer A::Answer B::Answer C::A::
+23:21:41  INFO[0] ------ Received data from 127.0.0.1:58610   :x
+23:21:41  INFO[0] ------ Server Response sent to client:   Question 4::Answer A::Answer B::Answer C::A::
+23:21:42  INFO[0] ------ Received data from 127.0.0.1:58610   :x
+23:21:42  INFO[0] ------ Server Response sent to client:   Question 4::Answer A::Answer B::Answer C::A::
+23:21:42  INFO[0] ------ Received data from 127.0.0.1:58610   :x
+23:21:42  INFO[0] ------ Server Response sent to client:   Question 4::Answer A::Answer B::Answer C::A::
+23:21:43  INFO[0] ------ Received data from 127.0.0.1:58610   :x
+23:21:43  INFO[0] ------ Server Response sent to client:   Question 3::Answer A::Answer B::Answer C::A::
+23:21:44  INFO[0] ------ Received data from 127.0.0.1:58610   :x
+23:21:44  INFO[0] ------ Server Response sent to client:   END
+23:21:44  INFO[0] ------ Server Response sent to client:   3
+23:21:44  INFO[0] ------ Server Response sent to client:   Wyniki Graczy
+
+User 41192: 3
+
+
+User 46274: 1
+
+
+User 58610: 3
+
+
+
+23:21:44  INFO[0] Failed to read bytes from client socket connection

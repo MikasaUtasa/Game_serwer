@@ -115,6 +115,7 @@ void TCPserwer::stopSerwer() {
     close(sockfd);
     close(newsockfd);
     TCPserwer::log_file.close();
+    TCPserwer::result_file.close();
     exit(0);
 }
 
@@ -199,7 +200,7 @@ void TCPserwer::handleConnection(/*void *new_sockfd*/int new_sock, sockaddr_in &
                 << ss2
                 << ": ";
     //result("czwdjjsdfojhisd");
-    result(ss3.str());
+    //result(ss3.str());
 
     sendData(ss2 , new_sock);
     while (new_sock >= 0) {
@@ -245,7 +246,8 @@ void TCPserwer::handleConnection(/*void *new_sockfd*/int new_sock, sockaddr_in &
             //TCPserwer::cleanUpThreads();
             break;
         }
-        result(buffer);
+        ss3 << buffer;
+        result(ss3.str());
         result("\n");
         //std::cout << "gowno" << buffer << std::endl;
         buff = buffer;
