@@ -39,8 +39,10 @@ struct sockaddr_in
 
 TCPserwer::TCPserwer(std::string srv_ip_addr ,int port) {
     TCPserwer::logging_file = "logs.txt";
+    TCPserwer::result_file_name = "results.txt";
     TCPserwer::port = port;
     TCPserwer::srv_ip_address = srv_ip_addr;
+    TCPserwer::points = 0;
     startSerwer();
     //startListen();
 }
@@ -49,6 +51,7 @@ TCPserwer::~TCPserwer() {
     cleanUpThreads();
     stopSerwer();
 }
+
 
 void TCPserwer::log(const std::string &message, int type) {
     time_t tmNow;
@@ -70,12 +73,23 @@ void TCPserwer::log(const std::string &message, int type) {
     std::cout << message << std::endl;
 }
 
+
+void TCPserwer::result(const std::string &message) {
+    result_file << message << std::endl;
+}
+
+
 int TCPserwer::startSerwer() {
     bzero((char *) &serv_addr, sizeof(serv_addr)); //Zerowanie buforu
     TCPserwer::log_file.open(TCPserwer::logging_file);
+    TCPserwer::result_file.open(TCPserwer::result_file_name);
+    //result_file << "wyniki" << std::endl;
     std::ostringstream sa;
+    std::ostringstream sb;
+    sb << "Wyniki Graczy" << std::endl;
     sa << "Serwer start Logging" << std::endl;
     TCPserwer::log(sa.str(), 0);
+    TCPserwer::result(sb.str());
 
 
     sockfd = socket(AF_INET, SOCK_STREAM, 0); //Tworzenie gniazda
@@ -174,6 +188,20 @@ void TCPserwer::handleConnection(/*void *new_sockfd*/int new_sock, sockaddr_in &
 
     std::string hello_msg = "Hello from the server";
     sendData(hello_msg, new_sock);
+    //std::ifstream file("results.txt"); // Open the file for reading
+
+    std::ostringstream ss1;
+    std::ostringstream ss3;
+
+    ss1 << ntohs(client.sin_port);
+    std::string ss2 = ss1.str();
+     ss3 << "User "
+                << ss2
+                << ": ";
+    //result("czwdjjsdfojhisd");
+    result(ss3.str());
+
+    sendData(ss2 , new_sock);
     while (new_sock >= 0) {
 
         char buffer[BUFFER_SIZE] = {0};
@@ -190,18 +218,51 @@ void TCPserwer::handleConnection(/*void *new_sockfd*/int new_sock, sockaddr_in &
             //TCPserwer::cleanUpThreads();
             break;
         }
+        int recieved_points = atoi(buffer);
+        TCPserwer::points += recieved_points;
         //ss.str(std::string());
         ss << "------ Received data from " << client_str.str() << "   :" << buffer;
         log(ss.str(), 0);
 
         for(int i = 0; i < 5; i++){
+
             buff = BuildResponse();
             sendData(buff, new_sock);
             rcv = read(new_sock, buffer, BUFFER_SIZE);
+            ss.str("");
+            ss << "------ Received data from " << client_str.str() << "   :" << buffer;
+            log(ss.str(), 0);
+            //int recieved_points = atoi(buffer);
+            //std::cout << recieved_points << std::endl;
 
         }
         buff = "END";
         sendData(buff, new_sock);
+        rcv = read(new_sock, buffer, BUFFER_SIZE);
+        if (rcv <= 0) {
+            log("Failed to read bytes from client socket connection", 0);
+            close(new_sock);
+            //TCPserwer::cleanUpThreads();
+            break;
+        }
+        result(buffer);
+        result("\n");
+        //std::cout << "gowno" << buffer << std::endl;
+        buff = buffer;
+        sendData(buff, new_sock);
+        std::ifstream file ("results.txt");
+        ss.str("");
+        ss << file.rdbuf();
+        file.close();
+        std::string koniec = ss.str();
+        //std::cout << koniec << std::endl;
+        sendData(koniec, new_sock);
+
+
+
+
+
+
 
 
         //buff = buffer;

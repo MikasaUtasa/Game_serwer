@@ -25,13 +25,17 @@ public:
     void startListen();
     static const int BUFFER_SIZE = 30720;
     void log(const std::string &message, int type);
+    void result(const std::string &message);
 
 private:
     std::string srv_ip_address;
     std::string logging_file;
     std::ofstream log_file;
+    std::string result_file_name;
+    std::fstream result_file;
     std::string serwerMessage;
     std::vector<std::thread> Threads;
+    int points;
 
     long message;
     int sockfd, port;
