@@ -199,9 +199,6 @@ void TCPserwer::handleConnection(/*void *new_sockfd*/int new_sock, sockaddr_in &
      ss3 << "User "
                 << ss2
                 << ": ";
-    //result("czwdjjsdfojhisd");
-    //result(ss3.str());
-
     sendData(ss2 , new_sock);
     while (new_sock >= 0) {
 
@@ -216,7 +213,6 @@ void TCPserwer::handleConnection(/*void *new_sockfd*/int new_sock, sockaddr_in &
         if (rcv <= 0) {
             log("Failed to read bytes from client socket connection", 0);
             close(new_sock);
-            //TCPserwer::cleanUpThreads();
             break;
         }
         int recieved_points = atoi(buffer);
@@ -259,25 +255,12 @@ void TCPserwer::handleConnection(/*void *new_sockfd*/int new_sock, sockaddr_in &
         std::string koniec = ss.str();
         //std::cout << koniec << std::endl;
         sendData(koniec, new_sock);
-
-
-
-
-
-
-
-
-        //buff = buffer;
-        //buff = BuildResponse();
-        //sendData(buff, new_sock);
     }
     //close(new_sock);
 }
 
 void TCPserwer::sendData(std::string &buffer, int &socket) {
     long bytesSent;
-    //buffer.clear();
-    //buffer.append(BuildResponse());
     std::ostringstream ss;
     bytesSent = write(socket, buffer.c_str(), buffer.size());
     if (bytesSent == buffer.size())
@@ -310,8 +293,6 @@ void TCPserwer::createThread() {
     t2.join();
 
 }
-
-
 
 void TCPserwer::cleanUpThreads() {
     std::lock_guard<std::mutex> lock(std::mutex);
