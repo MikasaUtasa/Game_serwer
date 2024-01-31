@@ -32,7 +32,7 @@ private:
     std::string logging_file;
     std::ofstream log_file;
     std::string result_file_name;
-    std::fstream result_file;
+    std::ofstream result_file;
     std::string serwerMessage;
     std::vector<std::thread> Threads;
     int points;
